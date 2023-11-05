@@ -15,5 +15,13 @@ pipeline {
                 echo "hello"
             }
         }
+        stage('Terraform Deployment') {
+            steps {
+                sh "terraform init"
+                sh "terraform validate"
+                sh "terraform plan"
+                sh "terraform apply --auto-approve"
+            }
+        }
     }
 }
