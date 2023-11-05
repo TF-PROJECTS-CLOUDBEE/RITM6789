@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'ecs-agent'}
+    agent { label 'IACglobalProxy'}
 
     stages {
         stage('Hello') {
