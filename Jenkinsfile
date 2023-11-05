@@ -12,6 +12,7 @@ pipeline {
             steps {
                 echo 'terraform version'
                 sh 'terraform --version'
+                echo "hello"
             }
         }
     }
