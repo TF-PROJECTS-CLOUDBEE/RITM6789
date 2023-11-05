@@ -8,5 +8,11 @@ pipeline {
                 echo "running in ecs agent"
             }
         }
+        stage('Terraform version') {
+            steps {
+                echo 'terraform version'
+                sh 'terraform --version'
+            }
+        }
     }
 }
