@@ -16,6 +16,9 @@ pipeline {
             }
         }
         stage('Terraform Deployment') {
+            input {
+                    message "Should we continue?"
+                }
             steps {
                 sh "terraform init"
                 sh "terraform validate"
